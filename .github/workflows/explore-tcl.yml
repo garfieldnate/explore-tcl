@@ -16,6 +16,9 @@ jobs:
       - name: Find Homebrew Tcl path
         run: |
           brew --prefix tcl-tk
+      - name: Find Homebrew Tcl path @8
+        run: |
+          brew --prefix tcl-tk@8
         continue-on-error: true
       - name: Install tree
         run: |
@@ -23,4 +26,8 @@ jobs:
       - name: List brew Tcl contents
         run: |
           tree $(brew --prefix tcl-tk)
+        continue-on-error: true
+      - name: List brew Tcl contents @8
+        run: |
+          tree $(brew --prefix tcl-tk@8)
         continue-on-error: true
