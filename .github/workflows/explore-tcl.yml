@@ -12,6 +12,8 @@ jobs:
       - name: Find system Tcl path
         run: |
           find / -name "tclsh*" 2>/dev/null
+        continue-on-error: true
       - name: Find Homebrew Tcl path
         run: |
           brew --prefix tcl-tk
+        continue-on-error: true
