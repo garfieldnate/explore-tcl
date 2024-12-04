@@ -9,6 +9,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
 
-      - name: Find Tcl path
+      - name: Find system Tcl path
         run: |
           find / -name "tclsh*" 2>/dev/null
+      - name: Find Homebrew Tcl path
+        run: |
+          brew --prefix tcl-tk
