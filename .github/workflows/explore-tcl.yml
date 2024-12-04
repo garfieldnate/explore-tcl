@@ -17,6 +17,9 @@ jobs:
         run: |
           brew --prefix tcl-tk
         continue-on-error: true
+      - name: Install tree
+        run: |
+          brew install tree
       - name: List brew Tcl contents
         run: |
           tree $(brew --prefix tcl-tk)
