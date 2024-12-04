@@ -1,0 +1,14 @@
+name: Explore Tcl Path
+
+on: [push]
+
+jobs:
+  explore-tcl:
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Find Tcl path
+        run: |
+          find / -name "tclsh*" 2>/dev/null
